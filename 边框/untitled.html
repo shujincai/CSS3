@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>border-image</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			border-width: 15px;
+			width: 250px;
+			padding: 10px 20px;
+		}
+		#round{
+			-moz-border-image: url("border.png") 30 30 round;
+    -webkit-border-image: url("boder.png") 30 30 round;
+    -moz-border-image: url("border.png") 30 30 round;
+    border-image: url(border.png) 30 30 round;
+
+		}
+#stretch{
+		-moz-border-image:url("border.png") 30 30 stretch; /* Firefox */
+	-webkit-border-image:url("border.png") 30 30 stretch; /* Safari 和 Chrome */
+	-o-border-image:url("border.png") 30 30 stretch; /* Opera */
+	border-image:url("border.png") 30 30 stretch;
+}
+	</style>
+}
+</head>
+<body>
+<p><b>注意</b>Internet Explorer 不支持 border-image 属性。</p>
+<p>border-image 属性用于指定一个边框的图像</p>
+<div id="round">在这里,图像平铺,以填补该地区</div><br>
+<div id="stretch">在这里,图像被拉伸以填补该地区</div>
+<p>下面是使用的图像</p>
+<img src="border.png">
+</body>
+</html>
