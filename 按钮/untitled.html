@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>按钮</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.button{
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		.button2{
+			background-color: blue;
+			font-size: 6px;
+		}
+		.button3{
+			background-color: red;
+			font-size: 12px;
+			border-radius: 5px;
+		}
+		.button:hover{
+			background-color: white;
+			color: black;
+			border: 1px solid black;
+			box-shadow: 0 12px 16px rgba(0, 0, 0, 0.7);
+		}
+		.disabled{
+			opacity: 0.6;
+			cursor: not-allowed;
+		}
+		.button:after{
+			content: "";
+			background: #90EE90;
+			display: block;
+			position: absolute;
+			padding-top: 300%;
+			padding-left: 350%;
+			margin-left: -20px!importtant;
+			margin-top: -120%;
+			opacity: 0;
+			transition: all 0.8s;
+
+		}
+		.button:active{
+			background-color: #3e8e41;
+			box-shadow: 0 5px #666;
+			transform: translateY(4px);
+		}
+	</style>
+</head>
+<body>
+<button>默认按钮</button>
+<a href="#" class="button">连接按钮</a>
+<button class="button">按钮</button>
+<input type="button" class="button" value="输入框按钮"><br>
+<button class="button button2">Blue</button>
+<button class="button button3">Red</button>
+<button class="button disabled">禁用按钮</button>
+</body>
+</html>
